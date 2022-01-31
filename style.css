@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
-html {
+/* html {
   font-size: 62.5%;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -21,7 +21,34 @@ body {
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+  width: 90vw;
+}
+
+.panel {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  margin: 10px;
+  border-radius: 50px;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.5 ease-in;
+  cursor: pointer;
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
 }
